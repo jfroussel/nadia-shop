@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons'; // 6.2.2
+import { MaterialIcons } from '@expo/vector-icons'; 
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import Home from './components/home'
 import Dashboard from './components/dashboard'
