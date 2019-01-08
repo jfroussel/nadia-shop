@@ -7,10 +7,6 @@ import Dashboard from './components/dashboard'
 import Store from './components/store'
 import Account from './components/account'
 
-
-
-
-
 class HomeScreen extends React.Component {
   render() {
     return (
