@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons'; 
+import { MaterialIcons } from '@expo/vector-icons';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import Home from './components/home'
 import Dashboard from './components/dashboard'
@@ -29,9 +29,7 @@ class DashboardScreen extends React.Component {
 class StoreScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Store />
-      </View>
+      <Store />
     );
   }
 }
@@ -59,7 +57,7 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
   } else if (routeName === 'Account') {
     iconName = `account-circle`;
   }
-  
+
   return <IconComponent name={iconName} size={25} color={tintColor} />;
 };
 
@@ -68,8 +66,8 @@ export default createAppContainer(
     {
       Home: { screen: HomeScreen },
       Dashboard: { screen: DashboardScreen },
-      Store: { screen: StoreScreen},
-      Account: {screen: AccountScreen}
+      Store: { screen: StoreScreen },
+      Account: { screen: AccountScreen }
     },
     {
       defaultNavigationOptions: ({ navigation }) => ({
