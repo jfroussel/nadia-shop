@@ -1,11 +1,12 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator, createAppContainer, createStackNavigator } from 'react-navigation';
 import Home from './components/home'
 import Dashboard from './components/dashboard'
 import Store from './components/store'
 import Account from './components/account'
+import Sales from './components/sales'
 
 class HomeScreen extends React.Component {
   render() {
@@ -61,13 +62,17 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
   return <IconComponent name={iconName} size={25} color={tintColor} />;
 };
 
+
+
 export default createAppContainer(
+ 
   createBottomTabNavigator(
     {
       Home: { screen: HomeScreen },
       Dashboard: { screen: DashboardScreen },
       Store: { screen: StoreScreen },
-      Account: { screen: AccountScreen }
+      Account: { screen: AccountScreen },
+
     },
     {
       defaultNavigationOptions: ({ navigation }) => ({
@@ -78,6 +83,13 @@ export default createAppContainer(
         activeTintColor: '#E91E63',
         inactiveTintColor: 'gray',
       },
-    }
-  )
+    },
+    
+  ),
+  createStackNavigator({
+    initialRouteName: {screen: HomeScreen},
+    Sales: { screen: Sales }
+  }),
+
+
 );

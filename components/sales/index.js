@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native'
 import { Text } from 'react-native-elements'
 
-class Articles extends Component {
+class Sales extends Component {
     render() {
         return (
             <View style={{ paddingTop: 20 }}>
@@ -14,12 +14,12 @@ class Articles extends Component {
                     height: 80,
                     padding: 20,
                 }}>
-                    <Text h3 style={{ color: '#fff' }}>Articles page</Text>
+                    <Text h3 style={{ color: '#fff' }}>Sales page</Text>
                 </View>
             </View>
         );
     }
 }
 
-export default Articles;
+export default Sales;
 
